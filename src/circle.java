@@ -65,7 +65,8 @@ public class circle
 		
 		
 	}
-	public circle(double x, double y, int diameter, Color color, double angel, double r, double v) {
+	//public circle(double x, double y, int diameter, Color color, double angel, double r, double v) {
+	public circle(double x, double y, int diameter, Color color, double angel, double r, double v, double [] ax, double [] ay) {
 		super();
 		double radians = Math.toRadians(angel);
 		//*R(Math.cos(radians))

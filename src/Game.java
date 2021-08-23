@@ -22,9 +22,9 @@ public class Game extends JPanel {
 	 private static Image image = null;
 	    private static ImageIcon ii = null;
 	JLabel thumb = new JLabel();
-/*	double x[] = {100,200,300,400,500,600,700,800};
-	double y[] = {100,200,300,400,500,600,700,800};
-	int angel[] = {360,360,360,360,360,360,360,360};*/
+	//double x[][] = {100,200,300,400}{100,200,300,400};
+//	double y[] = {100,200,300,400,500,600,700,800};
+	//int angel[] = {360,360,360,360,360,360,360,360};
 
 	/*private void moveBall() {
 		int r= 70;
@@ -89,12 +89,14 @@ public class Game extends JPanel {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//frame.setBackground( Color.black );
 		double rx = 726, ry = 467; //714, 493
+		double [][] x = {{100,200,300,400},{100,200,300,400},{100,200,300,400},{100,200,300,400}};
+		double [][] y = {{100,200,300,400},{100,200,300,400},{100,200,300,400},{100,200,300,400}};
 		try {
-			panel.addCirvle(new circle(rx,ry, 5, Color.blue,	 0.0,1.0,1.0,{100,200,300,400},{100,200,300,400}));
-			panel.addCirvle(new circle(rx,ry, 5, Color.blue,	 0.0,1.0,1.0));
-			panel.addCirvle(new circle(rx,ry, 5, Color.red,	 0.0,6.0,3.0));  // it bigger one time by increase r one time
-			panel.addCirvle(new circle(rx,ry, 5, Color.green,	 0.0,8.0,2.0));
-			panel.addCirvle(new circle(rx,ry, 5, Color.yellow, 0.0,3.0,3.0));
+			
+			panel.addCirvle(new circle(rx,ry, 5, Color.blue,	 0.0,1.0,1.0,x[0],y[0]));
+			panel.addCirvle(new circle(rx,ry, 5, Color.red,	 0.0,6.0,3.0,x[1],y[1]));  // it bigger one time by increase r one time
+			panel.addCirvle(new circle(rx,ry, 5, Color.green,	 0.0,8.0,2.0,x[2],y[2]));
+			panel.addCirvle(new circle(rx,ry, 5, Color.yellow, 0.0,3.0,3.0,x[3],y[3]));
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
