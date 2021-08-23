@@ -90,7 +90,7 @@ public class Game extends JPanel {
 		//frame.setBackground( Color.black );
 		double rx = 726, ry = 467; //714, 493
 		try {
-	
+			panel.addCirvle(new circle(rx,ry, 5, Color.blue,	 0.0,1.0,1.0,{100,200,300,400},{100,200,300,400}));
 			panel.addCirvle(new circle(rx,ry, 5, Color.blue,	 0.0,1.0,1.0));
 			panel.addCirvle(new circle(rx,ry, 5, Color.red,	 0.0,6.0,3.0));  // it bigger one time by increase r one time
 			panel.addCirvle(new circle(rx,ry, 5, Color.green,	 0.0,8.0,2.0));
