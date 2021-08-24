@@ -10,12 +10,27 @@ public class circle
 	private double angel;
 	private double r;
 	private double v;
+	private double  [] ax;
+	private double [] ay;
+	double rx = 959, ry = 531; //sun
 	//private double radians = 0;
 	public double getX() {
 		return x;
 	}
 	public double getY() {
 		return y; 
+	}
+	public double getrX() {
+		return rx;
+	}
+	public double getrY() {
+		return ry; 
+	}
+	public double getaX(int i) {
+		return ax[i];
+	}
+	public double getaY(int i) {
+		return ay[i]; 
 	}
 	public int getDiameter() {
 		return diameter;
@@ -61,7 +76,7 @@ public class circle
 		g.fillOval((int)x, (int)y, diameter, diameter);
 		//g.drawOval(x, y,diameter, diameter);
 	//	int r= 30;
-		update2();
+	//	update2();
 		
 		
 	}
@@ -73,12 +88,25 @@ public class circle
 		double mis = 56.7943250646551;// r of a 1:1 circle.. don't know what it mean yet
 		double mis2 = r/v;  // how much time it is bigger than 1:1
 		this.x = x	; //56.7943250646551  //113.5886501293097
-		this.y = y - (mis *mis2);
+		this.y = y ;//- (mis *mis2);
 		this.diameter = diameter;
 		this.color = color;
 		this.angel = angel;
 		this.r = r;
 		this.v = v;
+		this.ax = ax;
+		this.ay = ay;
+	//	inti();
+	}
+	public void inti() 
+	{
+		double maxx = x , maxy = y;
+		while(true)
+		{
+			for (int i = 0; i < 359; i++) {
+				//ax[0];
+			}
+		}
 	}
 
 }

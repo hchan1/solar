@@ -18,7 +18,7 @@ import javax.swing.border.EmptyBorder;
 
 @SuppressWarnings("serial")
 public class Game extends JPanel {
-	 private static ImageIcon icon = new ImageIcon("C:\\Users\\smaillhk\\eclipse-workspace\\tryagain\\src\\8821inner.png"); 
+	 private static ImageIcon icon = new ImageIcon("C:\\Users\\smaillhk\\eclipse-workspace\\tryagain\\src\\709in.png"); 
 	 private static Image image = null;
 	    private static ImageIcon ii = null;
 	JLabel thumb = new JLabel();
@@ -53,8 +53,9 @@ public class Game extends JPanel {
 		//super.paint(g);
 		 ii = (ImageIcon) icon;
 	        image = ii.getImage();
-	        g.fillOval(726, 467, 5, 5);
-	      //  g.drawImage(image, 0, 0, ii.getIconWidth(), ii.getIconHeight(), null);
+	     
+	      //  g.drawImage(image, 0, 0, ii.getIconWidth(), ii.getIconHeight(), null); 
+	        g.fillOval(959, 531, 5, 5);
 	/*	Graphics2D g2d = (Graphics2D) g;labe
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
@@ -80,7 +81,7 @@ public class Game extends JPanel {
 		 ImageIcon icon = new ImageIcon("C:\\Users\\smaillhk\\eclipse-workspace\\tryagain\\src\\8821inner.png");
 		  JLabel label = new JLabel(icon);
 		  frame.add(label);		
-  */ 
+   */
 		ii = (ImageIcon) icon;
 		image = ii.getImage();
 		frame.add(game);//
@@ -88,21 +89,26 @@ public class Game extends JPanel {
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//frame.setBackground( Color.black );
-		double rx = 726, ry = 467; //714, 493
-		double [][] x = {{100,200,300,400},{100,200,300,400},{100,200,300,400},{100,200,300,400}};
-		double [][] y = {{100,200,300,400},{100,200,300,400},{100,200,300,400},{100,200,300,400}};
+		double rx = 960, ry = 531; //714, 493
+		double [][] x = {{974,980},{997,1001},{997,967},{937,962},{1150,1138},{1424,1419}};
+		double [][] y = {{554,518},{593,516},{483,472},{631,632},{310,301},{236,228}};
 		try {
+			//public circle(double x, double y, int diameter, Color color, double angel, double r, double v, double [] ax, double [] ay) {
+			panel.addCirvle(new circle(963,510, 5, Color.red,	 0.0,1.0,1.0,x[0],y[0]));
+			panel.addCirvle(new circle(950,574, 5, Color.orange, 0.0,6.0,3.0,x[1],y[1]));  // it bigger one time by increase r one time
+			panel.addCirvle(new circle(1020,521, 5, Color.yellow,0.0,8.0,2.0,x[2],y[2]));
+			panel.addCirvle(new circle(905,618, 5, Color.green,  0.0,3.0,3.0,x[3],y[3]));
+			panel.addCirvle(new circle(1165,324, 5, Color.blue,	 0.0,1.0,1.0,x[4],y[4]));
+			panel.addCirvle(new circle(1432,247, 5, Color.pink,	 0.0,6.0,3.0,x[5],y[5]));  // it bigger one time by increase r one time
 			
-			panel.addCirvle(new circle(rx,ry, 5, Color.blue,	 0.0,1.0,1.0,x[0],y[0]));
-			panel.addCirvle(new circle(rx,ry, 5, Color.red,	 0.0,6.0,3.0,x[1],y[1]));  // it bigger one time by increase r one time
-			panel.addCirvle(new circle(rx,ry, 5, Color.green,	 0.0,8.0,2.0,x[2],y[2]));
-			panel.addCirvle(new circle(rx,ry, 5, Color.yellow, 0.0,3.0,3.0,x[3],y[3]));
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		frame.add(panel);// so important. add panel to frame.. to draw
+		int num = 1;
+		panel.angel(num);
 		while (true) {
 			/*try {
 					frame.getContentPane().add(new JLabel(new ImageIcon(ImageIO.read(new File("C:\\Users\\smaillhk\\eclipse-workspace\\tryagain\\src\\8821innerer.png")))));
